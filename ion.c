@@ -19,16 +19,23 @@
  */
 #define LOG_TAG "ion"
 
-#include <cutils/log.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <stdio.h>
+#include <string.h>
 #include <sys/ioctl.h>
 #include <sys/mman.h>
 #include <sys/types.h>
 
 #include <linux/ion.h>
 #include <ion/ion.h>
+
+
+#ifdef DEBUG
+#define ALOGE printf
+#else
+#define ALOGE(x,...)
+#endif
 
 int ion_open()
 {

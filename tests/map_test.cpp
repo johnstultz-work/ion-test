@@ -22,6 +22,8 @@
 
 #include "ion_test_fixture.h"
 
+#define PAGE_SIZE 4096
+
 class Map : public IonAllHeapsTest {
 };
 

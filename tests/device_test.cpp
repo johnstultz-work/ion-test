@@ -18,7 +18,7 @@
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-
+#include <sys/ioctl.h>
 #include <gtest/gtest.h>
 
 #include <ion/ion.h>
