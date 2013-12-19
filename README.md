@@ -10,11 +10,11 @@ Created here just to allow folks to quickly get the tests up and running outside
 This is still a little rough, so apologies for any hiccups you hit.
 
 On Ubuntu to get this building you need to build the gtest framework:
-$ apt-get install libgtest-dev
-$ cd /usr/src/gtest
-$ sudo bash
-# cmake CMakeLists.txt
-# make
+	$ apt-get install libgtest-dev
+	$ cd /usr/src/gtest
+	$ sudo bash
+	# cmake CMakeLists.txt
+	# make
 
 Then make should work in the ion-test directory.
 
