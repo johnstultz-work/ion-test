@@ -1,4 +1,4 @@
-CFLAGS=-std=c++0x -I../include/
+CFLAGS=-std=c++0x -I../include/ -I../kernel-headers/
 LDFLAGS=-L/usr/src/gtest/ -lgtest -lpthread -L../ -lion
 
 BASELIBS=ion_test_fixture.o gtest_main.o

@@ -22,6 +22,7 @@ LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_CFLAGS += -g -Wall -Werror -std=gnu++11
 LOCAL_SHARED_LIBRARIES += libion
 LOCAL_STATIC_LIBRARIES += libgtest_main
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/../kernel-headers
 LOCAL_SRC_FILES := \
 	ion_test_fixture.cpp \
 	allocate_test.cpp \

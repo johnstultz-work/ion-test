@@ -1,4 +1,4 @@
-CFLAGS=-I./include/
+CFLAGS=-I./include/ -I./kernel-headers/
 
 all:
 	gcc $(CFLAGS) -c ion.c -o ion.o
