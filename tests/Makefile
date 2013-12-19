@@ -8,13 +8,13 @@ INFILES=allocate_test.cpp device_test.cpp map_test.cpp formerly_valid_handle_tes
 OUTFILE=ion-unit-tests
 
 all: ion_test_fixture.o gtest_main.o $(INFILES)
-	g++ $(CFLAGS) $(BASELIBS) $(INFILES)  $(LDFLAGS) -o $(OUTFILE)
+	$(CXX) $(CFLAGS) $(BASELIBS) $(INFILES)  $(LDFLAGS) -o $(OUTFILE)
 
 ion_test_fixture.o: ion_test_fixture.cpp
-	g++ $(CFLAGS) -c ion_test_fixture.cpp -o ion_test_fixture.o
+	$(CXX) $(CFLAGS) -c ion_test_fixture.cpp -o ion_test_fixture.o
 
 gtest_main.o:
-	g++ $(CFLAGS) -c /usr/src/gtest/src/gtest_main.cc -o gtest_main.o
+	$(CXX) $(CFLAGS) -c /usr/src/gtest/src/gtest_main.cc -o gtest_main.o
 
 
 clean:
