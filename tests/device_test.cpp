@@ -19,12 +19,14 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/ioctl.h>
+
+#include <linux/ion_test.h>
+
 #include <gtest/gtest.h>
 
 #include <ion/ion.h>
 
 #include "ion_test_fixture.h"
-#include "ion_test.h"
 
 #define ALIGN(x,y) (((x) + ((y) - 1)) & ~((y) - 1))
 
