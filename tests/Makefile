@@ -1,4 +1,4 @@
-CFLAGS=-std=c++0x -I../include/ -I../kernel-headers/
+CFLAGS=-std=c++0x -I../include/ -I../kernel-headers/ -I/usr/include
 LDFLAGS=-L/usr/src/gtest/ -lgtest -lpthread -L../ -lion
 
 BASELIBS=ion_test_fixture.o gtest_main.o
@@ -8,13 +8,13 @@ INFILES=allocate_test.cpp device_test.cpp map_test.cpp formerly_valid_handle_tes
 OUTFILE=ion-unit-tests
 
 all: ion_test_fixture.o gtest_main.o $(INFILES)
-	$(CXX) $(CFLAGS) $(BASELIBS) $(INFILES)  $(LDFLAGS) -o $(OUTFILE)
+	$(CROSS_COMPILE)$(CXX) $(CFLAGS) $(BASELIBS) $(INFILES)  $(LDFLAGS) -o $(OUTFILE)
 
 ion_test_fixture.o: ion_test_fixture.cpp
-	$(CXX) $(CFLAGS) -c ion_test_fixture.cpp -o ion_test_fixture.o
+	$(CROSS_COMPILE)$(CXX) $(CFLAGS) -c ion_test_fixture.cpp -o ion_test_fixture.o
 
 gtest_main.o:
-	$(CXX) $(CFLAGS) -c /usr/src/gtest/src/gtest_main.cc -o gtest_main.o
+	$(CROSS_COMPILE)$(CXX) $(CFLAGS) -c /usr/src/gtest/src/gtest_main.cc -o gtest_main.o
 
 
 clean:
