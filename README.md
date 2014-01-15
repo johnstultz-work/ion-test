@@ -17,7 +17,7 @@ On Ubuntu to get this building you need to build the gtest framework:
 	# cmake CMakeLists.txt
 	# make
 
-Then make should work in the ion-test directory.
+Then make should work in the ion-test (or ion-test-master, if you downloaded the zip file) directory.
 
 To run:
 
