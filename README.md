@@ -19,3 +19,18 @@ On Ubuntu to get this building you need to build the gtest framework:
 
 Then make should work in the ion-test directory.
 
+To run:
+
+You will need to have a kernel that has the following options enabled:
+
+	CONFIG_ION=y
+	CONFIG_ION_TEST=y
+
+If your platform does not have ION support, you'll probably want to enable:
+
+	CONFIG_ION_DUMMY=y
+
+
+You can check if you're kernel is ok, by making sure /dev/ion and /dev/ion-test exist.
+
+Then as root, run ion-unit-tests in the ion-test/tests directory.
